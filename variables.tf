@@ -72,7 +72,6 @@ variable "user_data" {
 }
 variable "ami_id" {
   type        = string
-  default     = null
   description = "The image ID for the EKS worker nodes. If none is provided, Terraform will search for the latest version of their EKS optimized worker AMI based on platform"
 }
 variable "health_check_unhealthy_duration_before_replacement" {

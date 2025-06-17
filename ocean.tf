@@ -40,7 +40,8 @@ resource "spotinst_ocean_aws" "ocean" {
                                           /etc/eks/bootstrap.sh ${var.cluster_name}
                                       EOF
 
-  image_id                                           = var.ami_id != null ? var.ami_id : data.aws_ami.eks_worker.id
+  # image_id                                           = var.ami_id != null ? var.ami_id : data.aws_ami.eks_worker.id
+  image_id                                           = var.ami_id
   security_groups                                    = var.security_groups
   key_name                                           = var.key_name
   iam_instance_profile                               = var.worker_instance_profile_arn
